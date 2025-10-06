@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>text dmuper | Discord Bot</title>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Parallax 库 -->
+  <script src="https://unpkg.com/rellax@1.12.1/rellax.min.js"></script>
+  <!-- 毛玻璃 Polyfill -->
+  <script src="https://unpkg.com/css-backdrop-filter-polyfill"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#5B6BF7', dark: '#3E49D6' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 深色玻璃：低透明度，用於其餘區塊（更穩重，文字對比佳） */
+    .glass-deep {
+      background-color: rgba(0,0,0,0.25);  /* 深色半透明底，提升可讀性 */
+      backdrop-filter: blur(16px) saturate(1.4) brightness(1.05);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4) brightness(1.05);
+    }
+    .glass-deep-lg {
+      background-color: rgba(0,0,0,0.3);
+      backdrop-filter: blur(20px) saturate(1.5) brightness(0.95);
+      -webkit-backdrop-filter: blur(20px) saturate(1.5) brightness(0.95);
+    }
+    /* 首屏漸層疊加，無毛玻璃（純漸層確保文字可讀） */
+    .hero-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(80% 60% at 50% 30%,
+        rgba(20,22,40,0.25) 0%,  /* 適中漸層，無模糊濾鏡 */
+        rgba(15,16,30,0.45) 70%,
+        rgba(10,12,24,0.55) 100%);
+      pointer-events: none;
+    }
+    /* 導航輕微模糊，維持專業感但不強烈 */
+    .nav-blur {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="font-sans text-white overflow-x-hidden bg-black/20">
+
+  <!-- 背景層：rellax 驅動垂直視差 -->
+  <div id="parallax-bg"
+       class="rellax fixed inset-0 bg-center bg-cover z-0"
+       data-rellax-speed="-1"
+       style="background-image:url('https://image.starfall.dpdns.org/file/AgACAgUAAyEGAASsg8WbAAMOaOP0DEcYUep12jPpNXTS_vWK-_4AAi8Oaxu6MiBXZrNnFuPXqI0BAAMCAAN3AAM2BA.jpg')">
+  </div>
+
+  <!-- 首屏：無毛玻璃效果，僅用漸層疊加以確保文字可讀 -->
+  <section class="relative hero-overlay min-h-screen flex flex-col">
+    <header class="sticky top-0 z-30 nav-blur bg-black/30">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand text-xl">💬</span>
+            <span class="text-xl font-semibold tracking-wide">text dmuper</span>
+          </div>
+          <a href="https://discord.com/oauth2/authorize?client_id=1424702790470733874"
+             target="_blank"
+             class="inline-flex items-center rounded-lg bg-brand px-4 py-2 font-semibold text-white shadow-md transition hover:bg-brand-dark">
+            立即加入
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="relative z-20 flex-grow flex items-center justify-center text-center px-6">
+      <div class="mx-auto max-w-4xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
+          在任何地方，快速批次發送訊息
+        </h1>
+        <p class="mt-5 text-white/90 sm:text-lg">
+          text dmuper 採用 User Install，斜線指令 + 私密確認按鈕，按一下即可連續發送，且可重複使用。
+        </p>
+        <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a href="https://discord.com/oauth2/authorize?client_id=1424702790470733874"
+             target="_blank"
+             class="inline-flex items-center rounded-full bg-white px-6 py-3 font-bold text-brand transition">
+            💝 點擊以新增至我的應用程式！
+          </a>
+          <a href="#features"
+             class="inline-flex items-center rounded-full border border-white/40 px-6 py-3 font-semibold text-white/90 hover:bg-white/10">
+            🤔 了解功能
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心功能：深色玻璃，低透明提升穩重感 -->
+  <section id="features" class="relative py-16">
+    <!-- 深色玻璃背景層：z-0 -->
+    <div class="absolute inset-0 z-0 glass-deep"></div>
+    <!-- 內容：z-10 -->
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <h2 class="text-center text-3xl sm:text-4xl font-bold mb-10"> 核心功能</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-semibold mb-2">批次發送訊息</h3>
+          <p class="text-white/90">用斜線指令設定內容與次數（1-10），一鍵完成。</p>
+        </div>
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-semibold mb-2">私密確認</h3>
+          <p class="text-white/90">確認按鈕只對本人可見，避免誤觸。</p>
+        </div>
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-xl font-semibold mb-2">可重複點擊</h3>
+          <p class="text-white/90">發送後按鈕恢復可用，拒絕頻繁操作。</p>
+        </div>
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-xl font-semibold mb-2">隨處可用</h3>
+          <p class="text-white/90">User Install 模式，85%伺服器皆可用。</p>
+        </div>
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold mb-2">即時回應</h3>
+          <p class="text-white/90">回覆流暢，狀態即時更新。</p>
+        </div>
+        <div class="glass-deep p-6 rounded-2xl ring-1 ring-white/10 hover:bg-white/5 transition">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-semibold mb-2">簡潔易用</h3>
+          <p class="text-white/90">直觀斜線指令，小白也快速上手。</p>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://discord.com/oauth2/authorize?client_id=1424702790470733874"
+           target="_blank"
+           class="inline-flex items-center rounded-lg bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark">
+          立即加入 text dmuper
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用方法：深色玻璃，加強深度以匹配核心功能 -->
+  <section class="relative py-16">
+    <!-- 深色玻璃背景層：z-0 -->
+    <div class="absolute inset-0 z-0 glass-deep-lg"></div>
+    <!-- 內容：z-10 -->
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <h2 class="text-center text-3xl sm:text-4xl font-bold mb-10">📖 使用方法</h2>
+      <ol class="space-y-6">
+        <li class="glass-deep p-6 rounded-2xl ring-1 ring-white/10">
+          <h3 class="text-xl font-semibold mb-2">1. 點擊加入</h3>
+          <p class="text-white/90">點擊頁面任一「加入」按鈕，將 text dmuper 加到自己的 Discord。</p>
+        </li>
+        <li class="glass-deep p-6 rounded-2xl ring-1 ring-white/10">
+          <h3 class="text-xl font-semibold mb-2">2. 輸入斜線指令</h3>
+          <p class="text-white/90">在任何地方輸入 <span class="font-mono bg-black/30 px-2 py-0.5 rounded">/發送訊息</span>。</p>
+        </li>
+        <li class="glass-deep p-6 rounded-2xl ring-1 ring-white/10">
+          <h3 class="text-xl font-semibold mb-2">3. 設定內容與次數</h3>
+          <p class="text-white/90">填入要發送的內容與次數（1-10），送出後會顯示私密確認按鈕。</p>
+        </li>
+        <li class="glass-deep p-6 rounded-2xl ring-1 ring-white/10">
+          <h3 class="text-xl font-semibold mb-2">4. 點擊確認</h3>
+          <p class="text-white/90">按下「確認發送」後，訊息將公開送到所在頻道；按鈕可再次點擊。</p>
+        </li>
+      </ol>
+
+      <div class="mt-12 text-center">
+        <a href="https://discord.com/oauth2/authorize?client_id=1424702790470733874"
+           target="_blank"
+           class="inline-flex items-center rounded-full bg-white px-6 py-3 font-bold text-brand transition">
+           新增 text dmuper 至我的應用程式：）
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="bg-black/40 py-8 text-center text-white/80">
+    <p>&copy; 2025 text dmuper · Powered by Discord</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 啟動 Rellax：center: true 確保置中，速度 -1 減緩移動避免橫移錯位
+      new Rellax('.rellax', {
+        center: true,
+        speed: -1  // 調降速度以提升穩定性
+      });
+    });
+  </script>
+</body>
+</html>
