@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Text Dumper - Discord 批次訊息發送工具隱私權政策">
+    <title>隱私權政策 | Text Dumper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 40px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .last-updated {
+            font-size: 0.9em;
+            color: #999;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-left: 5px solid #ffc107;
+            border-radius: 5px;
+            margin: 25px 0;
+        }
+
+        .contact {
+            background: #e7f3ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            margin-top: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            color: #999;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>隱私權政策</h1>
+            <div class="subtitle">Text Dumper - Discord 批次訊息發送工具</div>
+            <div class="last-updated">最後更新日期：2025 年 10 月 7 日</div>
+        </header>
+
+        <section>
+            <h2>1. 關於 Text Dumper</h2>
+            <p>
+                Text Dumper 是一個 Discord 應用程式，旨在提供快速批次發送訊息的功能。本應用透過 Discord 斜線指令（Slash Commands）運作，允許使用者在伺服器或私訊中重複發送指定訊息。
+            </p>
+            <div class="highlight">
+                <p><strong>⚠️ 重要提醒：</strong>請勿使用本工具用於 spam 炸群行為。維護管理者有權將濫用者列入黑名單，禁止使用本應用。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. 我們收集哪些資訊</h2>
+            <p>為確保應用正常運作及防止濫用，Text Dumper 收集並處理以下最小必要資訊：</p>
+            
+            <h3>2.1 自動收集的資訊</h3>
+            <ul>
+                <li><strong>Discord 用戶 ID：</strong>用於黑名單管理及權限驗證（例如：管理員功能）</li>
+                <li><strong>指令使用紀錄：</strong>記錄指令執行時間及類型（僅用於系統日誌，不包含訊息內容）</li>
+                <li><strong>伺服器 ID：</strong>用於識別應用安裝位置（僅當應用安裝於伺服器時）</li>
+            </ul>
+
+            <h3>2.2 不收集的資訊</h3>
+            <ul>
+                <li><strong>訊息內容：</strong>透過 Text Dumper 發送的訊息內容不會被儲存或記錄</li>
+                <li><strong>個人識別資訊（PII）：</strong>不收集姓名、電子郵件、IP 位址或其他個人資料</li>
+                <li><strong>瀏覽紀錄：</strong>不追蹤使用者在 Discord 外的活動</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 資訊使用方式</h2>
+            <p>收集的資訊僅用於以下目的：</p>
+            <ul>
+                <li><strong>功能運作：</strong>執行批次訊息發送功能及互動按鈕</li>
+                <li><strong>濫用防護：</strong>維護黑名單以阻止炸群或濫用行為</li>
+                <li><strong>管理員功能：</strong>驗證管理員身份以執行黑名單管理指令</li>
+                <li><strong>系統維護：</strong>分析日誌以修復錯誤及改善效能</li>
+            </ul>
+            <p><strong>我們不會將您的資訊販售、租賃或分享給第三方。</strong></p>
+        </section>
+
+        <section>
+            <h2>4. 資料儲存與安全</h2>
+            <p>
+                Text Dumper 將黑名單資料（Discord 用戶 ID）儲存於 JSON 檔案中，並存放於安全的伺服器環境（DevBox）。我們採取以下措施保護資料：
+            </p>
+            <ul>
+                <li>伺服器存取權限受密鑰保護（SSH Key Authentication）</li>
+                <li>黑名單資料僅限授權管理員存取</li>
+                <li>定期檢查系統日誌以偵測異常活動</li>
+                <li>遵循 Discord 開發者政策及 API 使用條款</li>
+            </ul>
+            <p><strong>資料保留期限：</strong>黑名單資料將持續保留，直至管理員手動移除或應用停止運作。</p>
+        </section>
+
+        <section>
+            <h2>5. Discord 資料使用政策</h2>
+            <p>
+                Text Dumper 完全遵循 <a href="https://discord.com/developers/docs/policies-and-agreements/developer-policy" target="_blank">Discord 開發者政策</a> 及 <a href="https://discord.com/terms" target="_blank">Discord 服務條款</a>。我們僅透過 Discord API 存取必要資訊，且不會：
+            </p>
+            <ul>
+                <li>儲存或記錄私人訊息內容</li>
+                <li>未經授權存取伺服器資料</li>
+                <li>濫用 Discord API 或進行速率限制規避</li>
+                <li>干擾 Discord 平台正常運作</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. 使用者權利</h2>
+            <p>根據 GDPR 及資料保護法規，使用者享有以下權利：</p>
+            <ul>
+                <li><strong>查詢權：</strong>查詢我們是否持有您的資料（聯絡我們提供您的 Discord 用戶 ID）</li>
+                <li><strong>更正權：</strong>要求更正不準確的資料</li>
+                <li><strong>刪除權（被遺忘權）：</strong>要求刪除您的黑名單紀錄</li>
+                <li><strong>限制處理權：</strong>要求暫停處理您的資料</li>
+                <li><strong>反對權：</strong>反對我們處理您的資料</li>
+            </ul>
+            <p>若需行使上述權利，請透過以下聯絡方式與我們聯繫（需提供 Discord 用戶 ID 以驗證身份）。</p>
+        </section>
+
+        <section>
+            <h2>7. Cookie 與追蹤技術</h2>
+            <p>
+                Text Dumper <strong>不使用 Cookie、追蹤像素或任何網路追蹤技術</strong>。本應用為純 Discord Bot，僅透過 Discord API 運作，不涉及網頁瀏覽器或第三方追蹤。
+            </p>
+        </section>
+
+        <section>
+            <h2>8. 第三方服務</h2>
+            <p>
+                Text Dumper 託管於 ClawCloud（免費雲端環境），並使用以下第三方服務：
+            </p>
+            <ul>
+                <li><strong>Discord API：</strong>用於機器人運作及指令處理（遵循 <a href="https://discord.com/privacy" target="_blank">Discord 隱私權政策</a>）</li>
+                <li><strong>ClawCloud：</strong>雲端伺服器託管</li>
+            </ul>
+            <p>我們不對第三方服務的隱私權政策負責，建議使用者自行查閱相關政策。</p>
+        </section>
+
+        <section>
+            <h2>9. 兒童隱私</h2>
+            <p>
+                Text Dumper 不針對 13 歲以下兒童提供服務。我們不會故意收集未滿 13 歲兒童的個人資訊。若發現誤收集兒童資料，我們將立即刪除。
+            </p>
+            <p>
+                根據 Discord 服務條款，所有 Discord 使用者必須年滿 13 歲（部分地區為 16 歲）。若您未滿法定年齡，請勿使用 Text Dumper。
+            </p>
+        </section>
+
+        <section>
+            <h2>10. 政策變更</h2>
+            <p>
+                我們保留隨時修改本隱私權政策的權利。任何重大變更將在本頁面更新，並更新「最後更新日期」。建議定期查閱本政策以了解最新內容。
+            </p>
+            <p>
+                繼續使用 Text Dumper 即表示您同意變更後的政策。若不同意變更，請停止使用本應用並聯絡我們刪除您的資料。
+            </p>
+        </section>
+
+        <section class="contact">
+            <h3>📧 聯絡我們</h3>
+            <p>若對本隱私權政策有任何疑問、建議或資料處理相關請求，請透過以下方式聯絡：</p>
+            <p>
+                <strong>官方網站：</strong> <a href="https://dc-text-dumper.2o25shop.uk" target="_blank">https://dc-text-dumper.2o25shop.uk</a><br>
+                <strong>電子郵件：</strong> <a href="mailto:elivs402@proton.me">elivs402@proton.me</a>
+            </p>
+            <a href="https://dc-text-dumper.2o25shop.uk" class="btn" target="_blank">返回官網</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Text Dumper. 保留所有權利。</p>
+            <p>本應用遵循 Discord 服務條款及開發者政策。</p>
+        </footer>
+    </div>
+</body>
+</html>

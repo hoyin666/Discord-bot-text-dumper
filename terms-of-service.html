@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Text dumper - Discord 快速批次發送訊息工具的服務條款">
+    <title>服務條款 | Text dumper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft JhengHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2c3e50;
+            line-height: 1.8;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, #5865F2 0%, #7289DA 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            border-left: 4px solid #5865F2;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .intro p {
+            font-size: 1.05em;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .intro strong {
+            color: #5865F2;
+        }
+
+        h2 {
+            color: #5865F2;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        h3 {
+            color: #495057;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: #6c757d;
+        }
+
+        ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .warning strong {
+            color: #856404;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .warning p {
+            color: #856404;
+            margin-bottom: 5px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .success strong {
+            color: #155724;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .success p {
+            color: #155724;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer a {
+            color: #5865F2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 12px 30px;
+            background: white;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(88, 101, 242, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            background: #5865F2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+        }
+
+        .footer p {
+            margin-top: 20px;
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Text dumper</h1>
+            <p>服務條款 (Terms of Service)</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p><strong>✅ 應用說明：</strong></p>
+                <p>Text dumper 是一個快速批次發送訊息的 Discord 工具，旨在提升訊息發送效率。透過簡潔的斜線指令介面，使用者可便捷地設定訊息內容與重複次數（1-10 次），並透過確認按鈕執行發送。</p>
+            </div>
+
+            <h2>1. 服務內容</h2>
+            <p>Text dumper 提供以下核心功能：</p>
+            <ul>
+                <li><strong>批次發送訊息：</strong>透過 <code>/發送訊息</code> 指令，使用者可設定訊息內容與重複次數（1-10 次），點擊確認按鈕後系統將按設定間隔（0.5 秒）發送訊息至當前頻道。</li>
+                <li><strong>私密確認介面：</strong>所有指令回應均為 ephemeral（僅使用者可見），保障操作隱私。</li>
+                <li><strong>可重複點擊按鈕：</strong>確認按鈕可重複點擊，無需重新輸入指令即可多次發送。</li>
+                <li><strong>黑名單管理：</strong>管理員可透過 <code>/黑名單添加</code>、<code>/黑名單移除</code> 與 <code>/黑名單列表</code> 指令管理禁止使用本應用的用戶清單。</li>
+            </ul>
+
+            <h2>2. 使用規範</h2>
+            <h3>2.1 禁止濫用行為</h3>
+            <div class="warning">
+                <strong>⚠️ 重要警告</strong>
+                <p><strong>請勿使用本工具用於 spam 炸群！</strong></p>
+                <p>本應用設計目的為提升正常訊息發送效率，嚴格禁止以下行為：</p>
+            </div>
+            <ul>
+                <li><strong>Spam 攻擊：</strong>惡意大量發送重複、無意義或騷擾性訊息，干擾頻道正常運作。</li>
+                <li><strong>炸群行為：</strong>透過快速重複發送訊息淹沒頻道，影響其他用戶使用體驗。</li>
+                <li><strong>違反 Discord 服務條款：</strong>利用本工具從事任何違反 Discord 使用條款或社群準則的行為。</li>
+                <li><strong>騷擾或惡意攻擊：</strong>針對特定用戶或群組進行騷擾、威脅或仇恨言論傳播。</li>
+            </ul>
+
+            <h3>2.2 合理使用</h3>
+            <p>使用者應確保本應用僅用於以下合法且合理的場景：</p>
+            <ul>
+                <li>在取得管理員或頻道擁有者同意的情況下，發送公告、通知或活動訊息。</li>
+                <li>進行測試或示範功能時，於私人頻道或測試環境操作。</li>
+                <li>遵守所在伺服器的規則與頻道主題，避免不當發送。</li>
+            </ul>
+
+            <h2>3. 黑名單政策</h2>
+            <div class="success">
+                <strong>🛡️ 黑名單機制</strong>
+                <p>維護管理者有權將違規用戶列入黑名單，禁止其使用本應用。</p>
+            </div>
+
+            <h3>3.1 列入黑名單條件</h3>
+            <p>以下行為將導致用戶被永久或臨時列入黑名單：</p>
+            <ul>
+                <li>經查證屬實的 spam 炸群行為。</li>
+                <li>多次違反使用規範警告後仍持續濫用。</li>
+                <li>利用本工具從事騷擾、詐騙或其他惡意活動。</li>
+                <li>繞過黑名單限制（如使用多個帳號）再次濫用。</li>
+            </ul>
+
+            <h3>3.2 黑名單管理</h3>
+            <ul>
+                <li><strong>添加黑名單：</strong>管理員使用 <code>/黑名單添加 user_id=[用戶ID]</code> 指令將違規用戶加入黑名單，該用戶將立即無法使用本應用的任何功能。</li>
+                <li><strong>移除黑名單：</strong>若用戶承諾改正並提出申訴，管理員可使用 <code>/黑名單移除 user_id=[用戶ID]</code> 解除封禁。</li>
+                <li><strong>查看黑名單：</strong>管理員可透過 <code>/黑名單列表</code> 查看當前所有被封禁的用戶 ID。</li>
+                <li><strong>持久化儲存：</strong>黑名單資料儲存於 <code>blacklist.json</code> 檔案，即使 bot 重啟也不會遺失。</li>
+            </ul>
+
+            <h3>3.3 申訴流程</h3>
+            <p>若用戶認為被誤加入黑名單或已改正行為，可透過以下管道提出申訴：</p>
+            <ul>
+                <li>電郵至 info@2o25shop.uk 聯絡管理員。</li>
+                <li>提供用戶 ID、被封禁時間與詳細說明。</li>
+                <li>管理員將於 3-7 個工作日內審核並回覆結果。</li>
+            </ul>
+
+            <h2>4. 免責聲明</h2>
+            <p>Text dumper 僅作為工具提供服務，開發者與維護者不對以下情況負責：</p>
+            <ul>
+                <li><strong>濫用後果：</strong>用戶因違反本條款或 Discord 服務條款而導致的帳號封禁、伺服器踢出或其他懲罰。</li>
+                <li><strong>訊息內容：</strong>用戶透過本應用發送的訊息內容由使用者自行負責，開發者不對任何違法、侵權或不當內容承擔法律責任。</li>
+                <li><strong>服務中斷：</strong>因 Discord API 變更、伺服器維護或不可抗力因素導致的服務中斷或功能異常。</li>
+                <li><strong>資料遺失：</strong>黑名單資料或其他設定因伺服器故障而遺失（建議定期備份）。</li>
+            </ul>
+
+            <h2>5. Discord 服務條款遵守</h2>
+            <p>使用 Text dumper 時，使用者必須同時遵守 <a href="https://discord.com/terms" target="_blank" style="color: #5865F2; font-weight: 600;">Discord 服務條款</a> 與 <a href="https://discord.com/guidelines" target="_blank" style="color: #5865F2; font-weight: 600;">社群準則</a>。任何違反 Discord 政策的行為同樣構成對本條款的違反。</p>
+
+            <h2>6. 條款變更</h2>
+            <p>維護管理者保留隨時修改本服務條款的權利，重大變更將於客網公告。用戶持續使用本應用即視為同意最新版本條款。</p>
+
+            <h2>7. 聯絡資訊</h2>
+            <p>如有任何疑問、申訴或合作需求，請透過以下管道聯繫：</p>
+            <ul>
+                <li><strong>電郵：</strong> info@2o25shop.uk</a></li>
+                <li><strong>管理員 Discord ID：</strong> 800536911378251787</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <a href="https://dc-text-dumper.2o25shop.uk/" target="_blank">💝 返回客網</a>
+            <p>© 2025 Text dumper. 本應用遵守 Discord 服務條款。最後更新：2025 年 10 月 7 日</p>
+        </div>
+    </div>
+</body>
+</html>
